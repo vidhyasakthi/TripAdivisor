@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Advisor</title>
+    <!-- Google Style Sheet for Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN LINK -->
+    <link href="
+    https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+    " rel="stylesheet">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="flex justify-around items-center  sticky top-0 z-50 bg-white" style="color: #1A4029;">
+        <div class="navbar_s1">
+            <img src="./Images/tripadvisor.png" alt="img" class="w-36 h-24">
+        </div>
+        <div class="flex gap-6 font-semibold">
+            <a class="hover:bg-slate-500 px-4 py-2  rounded-full" href="#">Discover</a>
+            <a class="hover:bg-slate-500 px-4 py-2  rounded-full" href="#">Trips</a>
+            <a class="hover:bg-slate-500 px-4 py-2  rounded-full" href="#">Reviews</a>
+            <a class="hover:bg-slate-500 px-4 py-2  rounded-full" href="#">More</a>
+        </div>
+        <div class="flex gap-3 items-center text-center" style="color: #1A4029;">
+            <p class="flex items-center text-center gap-3 text-xl font-medium"><i
+                    class="fa-solid fa-globe  relative bottom-1 right-2" style="width: 1px; height: 1px;"></i> |
+                INR</p>
+            <input type="button" class="bg-black w-20 h-10 text-white font-medium rounded-full" value="Sign in">
+
+        </div>
+    </div>
+
+    <!-- Title Bar -->
+    <div class="text-5xl font-extrabold text-center items-center mr-6" style="color: #002B11;">
+        <h1>Where to?</h1>
+    </div>
+    <!-- Tab -->
+    <div class="flex justify-center gap-5 mt-8 font-medium " style="font-size: larger; color: #143C24;">
+        <div class="gap-3 flex items-center hover:underline mb-5">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Search All</a>
+        </div>
+        <div class="gap-3 flex items-center hover:underline mb-5">
+            <i class="fa-solid fa-bed"></i>
+            <a href="#">Hotels</a>
+        </div>
+        <div class="gap-3 flex items-center hover:underline mb-5">
+            <i class="fa-solid fa-camera"></i>
+            <a href="#">Thinks To Do</a>
+        </div>
+        <div class="gap-3 flex items-center hover:underline mb-5">
+            <i class="fa-solid fa-utensils"></i>
+            <a href="#">Restaurants</a>
+        </div>
+        <div class="gap-3 flex items-center hover:underline mb-5">
+            <i class="fa-solid fa-plane-departure"></i>
+            <a href="#">Flights</a>
+        </div>
+        <div class="gap-3 flex items-center hover:underline mb-5">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Holiday Homes</a>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex justify-center mt-6">
+        <div class="flex items-center justify-center gap-4 p-4 rounded-full shadow-md w-1/2 h-14 "
+            style="background-color: #F7F7F7; border: solid #DFE1DF 2px;">
+            <i class="fa-solid fa-magnifying-glass text-gray-600 text-xl"></i>
+            <input class="flex-grow bg-transparent outline-none text-gray-700 placeholder-gray-400" type="text"
+                placeholder="Place to go, Things to do, hotels...">
+            <button class="text-black font-semibold px-4 py-2 rounded-full transition duration-300"
+                style="background-color: #00D352;">Search</button>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="flex justify-center p-16">
+        <div class=" border rounded-xl flex " style="background-color: #00D352;width: 1100px; height: 500px;">
+            <div id="slides" class="mt-5 ml-5 mr-5 mb-5"> <img id="mainImage" src="./Images/caption.jpg" alt="img-1"
+                    class="rounded-xl" style="width: 530px; height: 460px;"><button id="captionBtn"
+                    class="w-28 h-12 font-medium text-black border-black border-2 rounded-full relative bottom-14 left-5"
+                    style="background-color: #00D352;">@teapottwins</button></div>
+            <div class="border-l border-black my-5"></div>
+            <div class="mt-5 mb-5 ml-10 mr-5">
+                <h1 class="text-5xl font-bold w-96 text-center mt-10 ml-5" style="color: #002B11;">Find things to do for
+                    everything you’re into</h1>
+                <p class="text-xl text-center mt-8">Browse 400,000+ experiences and book with us.</p>
+                <div class="flex justify-center mt-6">
+                    <button class="w-32 h-12 rounded-full text-white font-medium"
+                        style="background-color: #143C24;">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Find things -->
+    <div>
+        <div>
+            <p class="font-bold ml-52" style="font-size: 20px;">Find things to do by interest</p>
+            <p class="ml-52 mt-3" style="font-size: 17px;">Whatever you're into, we’ve got it</p>
+        </div>
+    </div>
+    <div class="flex flex-row justify-center gap-5 mt-10 mr-5">
+        <div><img src="./Images/outdoor.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="relative bottom-12 left-3 text-white text-3xl font-bold">Outdoors</h1>
+        </div>
+        <div><img src="./Images/food.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="relative bottom-12 left-3 text-white text-3xl font-bold">Food</h1>
+        </div>
+        <div><img src="./Images/culture.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="relative bottom-12 left-3 text-white text-3xl font-bold">Culture</h1>
+        </div>
+        <div><img src="./Images/water.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="relative bottom-12 left-3 text-white text-3xl font-bold">Water</h1>
+        </div>
+    </div>
+
+    <!-- Travellers Rating -->
+    <div>
+        <div>
+            <p class="font-bold ml-52" style="font-size: 20px;">You might like these</p>
+            <p class="ml-52 mt-3" style="font-size: 17px;">More things to do in Panjim</p>
+        </div>
+    </div>
+
+    <div class="flex flex-row flex-wrap justify-center gap-5 mt-10 mr-5">
+
+        <div>
+            <img src="./Images/img(1).jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Old Goa Heritage Walk by Make It Happen
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(663)</span>
+            </div>
+        </div>
+
+        <div>
+            <img src="./Images/img(2).jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                BLive Electric Bike Tours - Discovery of Divar Island
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(1,038)</span>
+            </div>
+        </div>
+
+        <div>
+            <img src="./Images/img(3).jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                The Nature Trail at Chorao Island in Goa
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(610)</span>
+            </div>
+        </div>
+
+        <div>
+            <img src="./Images/img (4).jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Latin Quarter Walk At Fontainhas
+            </h1>
+            <div class="flex items-center mt-9 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(489)</span>
+            </div>
+        </div>
+
+    </div>
+    <!-- Travelling place -->
+    <div class="mt-10">
+        <div>
+            <p class="font-bold ml-52" style="font-size: 20px;">You might like these</p>
+            <p class="ml-52 mt-3" style="font-size: 17px;">More things to do in Panjim</p>
+        </div>
+    </div>
+
+    <div class="flex flex-row flex-wrap justify-center gap-5 mt-10 mr-5">
+
+        <div>
+            <img src="./Images/bankok.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium" style="color: #143C24;">Bangkok</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Half-Day Railway Market and Floating Market Tour in Thailand
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(2,152)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹2,779 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/panjim.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium" style="color: #143C24;">Panjim</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                BLive Electric Bike Tours - Discovery of Divar Island
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(2,577)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹1,100 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/hanoi.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium" style="color: #143C24;">Hanoi</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                The Nature Trail at Chorao Island in Goa
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(3,431)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹2,954 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/ho chi minh city.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium" style="color: #143C24;">Ho chi minh city </h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Latin Quarter Walk At Fontainhas
+            </h1>
+            <div class="flex items-center mt-9 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(5,532)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹4,511 per adult</h1>
+        </div>
+
+    </div>
+    <!-- Tamilnadu places -->
+    <div class="mt-10">
+        <div>
+            <p class="font-bold ml-52" style="font-size: 20px;">You might like these</p>
+            <p class="ml-52 mt-3" style="font-size: 17px;">More things to do in Panjim</p>
+        </div>
+    </div>
+
+    <div class="flex flex-row flex-wrap justify-center gap-5 mt-10 mr-5">
+
+        <div>
+            <img src="./Images/ISHA.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Adiyogi 3D Light Show – A Spectacle of Light, Sound - Coimbatore
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">45.0</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(10)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹4,722 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/ooty.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Coimbatore to Ooty- transfers+Hotel+Sightseeing
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">5.0</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(2)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹27,038 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/hanoi.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Hill Station Tour from Coimbatore to Valparai - 2 days
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">5.0</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(2)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹25,709 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/ho chi minh city.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Isha Yoga Centre - Coimbatore
+            </h1>
+            <div class="flex items-center mt-9 gap-2">
+                <span class="text-green-600 font-bold">4.4</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(28)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹6,894 per adult</h1>
+        </div>
+
+    </div>
+    <!-- Banner-2 -->
+    <div class="flex justify-center p-16">
+        <div>
+            <img src="./Images/banner1.png" alt="" class=" border rounded-xl flex "
+                style="width: 1100px; height: 500px;">
+            <h1 class="text-5xl font-bold text-white ml-5 relative bottom-44">The world’s best things to do</h1>
+
+            <h1 class="text-2xl font-medium text-white ml-5 relative bottom-40">Make it a trip to remember with 2025’s
+                Travellers’ Choice Awards Best of the Best.</h1>
+            <button class="w-44 h-12 rounded-full font-medium relative bottom-36 ml-3"
+                style="background-color: white; color: #002B11;">Book Now</button>
+        </div>
+
+
+
+    </div>
+    </div>
+    <!-- Inspiration -->
+   <div class="mt-5 w-full" style="background-color: #F7F7F7;">
+    <div>
+        <p class="font-bold ml-52" style="font-size: 20px;">Inspiration to get you going</p>
+    </div>
+
+    <div class="flex flex-row flex-wrap justify-center gap-10 mt-10 mr-5">
+
+        
+        <div class="flex flex-col items-center" style="width: 350px;">
+            <img src="./Images/family.jpg" alt="" class="rounded-xl" style="width: 100%; height: 260px;">
+            <a href="#" class="mt-4 font-semibold text-center hover:underline" style="color:#002B11; font-size: 17px;">
+                The ultimate family travel guide
+            </a>
+        </div>
+
+       
+        <div class="flex flex-col items-center" style="width: 350px;">
+            <img src="./Images/dubai.jpg" alt="" class="rounded-xl" style="width: 100%; height: 260px;">
+            <a href="#" class="mt-4 font-semibold text-center hover:underline" style="color:#002B11; font-size: 17px;">
+                Where to stargaze around the world, from Utah to Dubai
+            </a>
+        </div>
+
+       
+        <div class="flex flex-col items-center" style="width: 350px;">
+            <img src="./Images/paris.jpg" alt="" class="rounded-xl" style="width: 100%; height: 260px;">
+            <a href="#" class="mt-4 font-semibold text-center hover:underline" style="color:#002B11; font-size: 17px;">
+                Load up on art in Paris, NYC, and other culture hot spots
+            </a>
+        </div>
+
+    </div>
+</div>
+<!-- things -->
+ <div class="mt-10">
+        <div>
+            <p class="font-bold ml-52" style="font-size: 20px;">Things to do—right now</p>
+            <p class="ml-52 mt-3" style="font-size: 17px;">Seasonal faves you don’t want to miss</p>
+        </div>
+    </div>
+
+    <div class="flex flex-row flex-wrap justify-center gap-5 mt-10 mr-5">
+
+        <div>
+            <img src="./Images/group.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium w-16 h-6 border rounded-md text-center" style=" background-color:#DFE1DF #143C24;">Sorrento</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+               Small-group boat tour of the Amalfi Coast from Sorrento
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.8</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(330)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹16,160 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/dolpins.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+             <h1 class="text-xs mt-2 ml-3 font-medium w-16 h-6 border rounded-md text-center" style=" background-color:#DFE1DF #143C24;">Albufeira</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+               Dolphins Search and Benagil Caves from Albufeira
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(3,461)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹3,673 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/park.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium w-16 h-6 border rounded-md text-center" style=" background-color:#DFE1DF #143C24;">Calgary</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+               Explore Banff National Park with Our Premium Day Tour
+            </h1>
+            <div class="flex items-center mt-2 gap-2">
+                <span class="text-green-600 font-bold">5.0</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(336)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹9,344 per adult</h1>
+        </div>
+
+        <div>
+            <img src="./Images/boat.jpg" alt="" style="width: 256px; height: 260px;" class="rounded-xl">
+            <h1 class="text-xs mt-2 ml-3 font-medium w-16 h-6 border rounded-md text-center" style=" background-color:#DFE1DF #143C24;">Jackson</h1>
+            <h1 class="mt-3 font-semibold" style="color:#002B11; font-size: 17px; width: 256px;">
+                Whitewater Rafting in Jackson Hole: Small Boat Excitement
+            </h1>
+            <div class="flex items-center mt-9 gap-2">
+                <span class="text-green-600 font-bold">4.9</span>
+                <div class="gap-1 flex flex-row">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                    <img src="./Images/icons8.png" alt="" class="w-4 h-4">
+                </div>
+                <span class="text-gray-500 ml-1">(498)</span>
+            </div>
+            <h1 class="text-xs mt-2  font-bold" style="color: #143C24;">from ₹11,639 per adult</h1>
+        </div>
+
+    </div>
+     <!-- Next trip -->
+      <div class="mt-10"><div><p class="font-bold ml-52" style="font-size: 25px;">Your next trip is waiting</p><p class="ml-52 mt-3" style="font-size: 20px;">Weekend getaways from Dharmapuri</p></div>
+   <div class="flex flex-row flex-wrap justify-center gap-5 mt-10 mr-5">
+
+
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/chennai.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-9 left-3 text-white text-xl font-bold leading-tight w-[90%]">
+      Chennai (Madras), India
+    </h1>
+  </div>
+
+  
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/ooty1.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-3 left-3 text-white text-xl font-bold leading-tight w-[90%]">
+      Ooty (Udhagamandalam), India
+    </h1>
+  </div>
+
+
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/bengalore.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-9 left-3 text-white text-xl font-bold leading-tight w-[90%]">
+      Bengaluru, India
+    </h1>
+  </div>
+
+
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/mahabalipuram.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-9 left-3 text-white text-xl font-bold leading-tight w-[90%]">
+      Mahabalipuram, India
+    </h1>
+  </div>
+
+</div>
+
+<!-- iconics -->
+  <div class="mt-10"><div><p class="font-bold ml-52" style="font-size: 20px;">Iconic places you need to see</p></div>
+   <div class="flex flex-row flex-wrap justify-center gap-5 mt-10 mr-5">
+
+
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/rome.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-3 left-3 text-white text-2xl font-bold leading-tight w-[90%]">
+     
+Rome, Italy
+    </h1>
+  </div>
+
+  
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/france.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-3 left-3 text-white text-2xl font-bold leading-tight w-[90%]">
+     
+Paris, France
+    </h1>
+  </div>
+
+
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/vegas.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-3 left-3 text-white text-2xl font-bold leading-tight w-[90%]">
+
+Las Vegas, NV
+    </h1>
+  </div>
+
+
+  <div class="relative" style="width: 256px; height: 260px;">
+    <img src="./Images/iceland.jpg" alt="" class="rounded-xl w-full h-full object-cover">
+    <h1 class="absolute bottom-3 left-3 text-white text-2xl font-bold leading-tight w-[90%]">
+  
+Reykjavik, Iceland
+
+    </h1>
+  </div>
+
+</div>
+ <!-- Side img -->
+    <div class="flex justify-center p-16">
+        <div class=" border rounded-xl flex " style="background-color: #F7F7F7;width: 1100px; height: 600px;">
+            <div class="mt-5 ml-5 mr-5 mb-5"> <img src="./Images/sideimg.jpg" alt="img-1" class="rounded-xl" style="width: 530px; height: 550px;">
+                <button class="w-28 h-12 font-medium text-black border-black border-2 rounded-full relative bottom-14 left-5"style="background-color: #00D352;">@teapottwins</button></div>
+           
+            <div class="mt-48 mb-5 ml-10 mr-5">
+                <div class="flex justify-center" style="color: #002B11; font-size: 16px;">
+                <img src="./Images/logo.svg" alt="" class="w-6 h-6"> <p>Sponsored by <a href="" class="underline">Wanderlab</a></p></div>
+                <h1 class="text-3xl font-semibold w-96 text-center mt-3 ml-5" style="color: #002B11;">Watch The Wanderer</h1>
+                <p class="text-center mt-2 w-96" style="color: #002B11; font-size: 17px;">Tripadvisor’s award-winning travel series, now streaming on Amazon Prime Video</p>
+                <div class="flex justify-center mt-6">
+                    <button class="w-32 h-12 rounded-full text-white font-medium"
+                        style="background-color: #143C24;">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Green banner -->
+   <section class="relative text-white overflow-hidden" style="background-color: #002B11;">
+  <div class=" mx-auto grid md:grid-cols-2 items-center  relative z-10" style="width: 1000px; height: 600px;">
+    
+    <!-- Left Content -->
+    <div class="space-y-6">
+      <!-- Logo Badge -->
+      <div class="flex items-center">
+        <div class="text-black font-bold rounded-lg px-3 py-1 flex items-center gap-2" style="background-color: #FEE715;">
+          <!-- Replace with TripAdvisor SVG if available -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><circle cx="12" cy="12" r="10"/></svg>
+          <span>2025</span>
+        </div>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Travellers' Choice <br> Awards Best <br> of the Best
+      </h1>
+
+      <p class="text-lg text-gray-200 max-w-md">
+        Among our top 1% of places, stays, eats, and experiences—decided by you.
+      </p>
+
+      <button class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+        See the winners
+      </button>
+    </div>
+
+    <!-- Right Image -->
+    <div class="relative flex justify-center">
+      <img src="./Images/img.png" alt="Travel Activity" class="" style="height: 600px; width: 1300px;">
+    </div>
+  </div>
+
+
+  <!-- Custom CSS for diagonal image shape -->
+  <style>
+    .custom-clip {
+      clip-path: polygon(15% 0, 100% 10%, 85% 100%, 0% 90%);
+      border-radius: 30px;
+    }
+  </style>
+</section>
+<!-- Empty space before footer -->
+<div class="mt-20"></div>
+
+<!-- Footer -->
+<footer class="bg-gray-50 border-t text-gray-800 text-sm mt-10">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid md:grid-cols-4 gap-8">
+
+    <!-- About Tripadvisor -->
+    <div>
+      <h3 class="font-semibold mb-3">About Tripadvisor</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">About Us</a></li>
+        <li><a href="#" class="hover:underline">Press</a></li>
+        <li><a href="#" class="hover:underline">Resources and Policies</a></li>
+        <li><a href="#" class="hover:underline">Careers</a></li>
+        <li><a href="#" class="hover:underline">Trust & Safety</a></li>
+        <li><a href="#" class="hover:underline">Contact us</a></li>
+        <li><a href="#" class="hover:underline">Tripadvisor Technology Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Explore -->
+    <div>
+      <h3 class="font-semibold mb-3">Explore</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Write a review</a></li>
+        <li><a href="#" class="hover:underline">Add a Place</a></li>
+        <li><a href="#" class="hover:underline">Join</a></li>
+        <li><a href="#" class="hover:underline">Travellers' Choice</a></li>
+        <li><a href="#" class="hover:underline">Help Centre</a></li>
+        <li><a href="#" class="hover:underline">Travel Stories</a></li>
+      </ul>
+    </div>
+
+    <!-- Do Business -->
+    <div>
+      <h3 class="font-semibold mb-3">Do Business With Us</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Owners & DMO/CVB</a></li>
+        <li><a href="#" class="hover:underline">Business Advantage</a></li>
+        <li><a href="#" class="hover:underline">Sponsored Placements</a></li>
+        <li><a href="#" class="hover:underline">Access our Content API</a></li>
+      </ul>
+
+      <h3 class="font-semibold mt-6 mb-3">Get The App</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">iPhone App</a></li>
+        <li><a href="#" class="hover:underline">Android App</a></li>
+      </ul>
+    </div>
+
+    <!-- Tripadvisor Sites -->
+    <div>
+      <h3 class="font-semibold mb-3">Tripadvisor Sites</h3>
+      <p>Book tours and attraction tickets on <a href="#" class="underline">Viator</a></p>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t py-6 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between text-gray-600">
+    <div class="flex items-center gap-2">
+      <img src="./Images/logo.svg" alt="Tripadvisor" class="w-6 h-6">
+      <p>© 2025 Tripadvisor LLC All rights reserved.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-4 mt-4 md:mt-0">
+      <a href="#" class="hover:underline">Terms of Use</a>
+      <a href="#" class="hover:underline">Privacy and Cookies Statement</a>
+      <a href="#" class="hover:underline">Cookie consent</a>
+      <a href="#" class="hover:underline">Site Map</a>
+      <a href="#" class="hover:underline">How the site works</a>
+      <a href="#" class="hover:underline">Contact us</a>
+      <a href="#" class="hover:underline">Accessibility Statement</a>
+    </div>
+  </div>
+
+  <!-- Country & Currency + Social Icons -->
+  <div class="px-6 md:px-12 pb-8 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-700">
+    <div class="flex gap-4">
+      <select class="border rounded-md px-3 py-2">
+        <option>₹ INR</option>
+        <option>$ USD</option>
+        <option>€ EUR</option>
+      </select>
+      <select class="border rounded-md px-3 py-2">
+        <option>India</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+      </select>
+    </div>
+
+    <div class="flex gap-4 text-xl">
+      <a href="#" class="hover:text-green-700"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="hover:text-green-700"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="hover:text-green-700"><i class="fab fa-pinterest"></i></a>
+      <a href="#" class="hover:text-green-700"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-green-700"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="hover:text-green-700"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
